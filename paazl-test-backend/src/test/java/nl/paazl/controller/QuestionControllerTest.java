@@ -4,13 +4,13 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import nl.paazl.dto.QuestionDTO;
+import nl.paazl.model.QuestionEntity;
 
 @RunWith(MockitoJUnitRunner.class)
 public class QuestionControllerTest {
@@ -24,7 +24,7 @@ public class QuestionControllerTest {
 	    final String baseUrl = "http://localhost:8080/services/questions";
 	    URI uri = new URI(baseUrl);
 	 
-	    ResponseEntity<QuestionDTO[]> result = restTemplate.getForEntity(uri, QuestionDTO[].class);
+	    ResponseEntity<QuestionEntity[]> result = restTemplate.getForEntity(uri, QuestionEntity[].class);
 	     
 	    Assert.assertEquals(200, result.getStatusCodeValue());
 	    Assert.assertEquals(11, result.getBody().length);
