@@ -26,7 +26,7 @@ export class QuestionsComponent implements OnInit {
 
   checkAnswers() {
     this.questionSerivce.checkAnswers(this.questions).subscribe(response => {
-      this.message = 'You got ' + response.score + ' corrects answers. You are a: ' + response.description;
+      this.message = 'You got ' + response.score + ' correct answers. You are a: ' + response.description;
     },error => {
       this.message = 'So sorry, There was a problem getting your Score';
     });
