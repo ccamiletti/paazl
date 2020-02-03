@@ -1,0 +1,33 @@
+table {
+    width: 70%;
+    margin-left:auto; 
+    margin-right:auto; 
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+}
+
+.example-button-row button, .example-button-row a {
+  margin-right: 8px;
+}
+
+  /* Set a style for all buttons */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+  }
+
+.centered {
+    text-align: center;
+}
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }

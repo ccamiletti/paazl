@@ -1,0 +1,25 @@
+version: "3"
+    
+services:
+    paazl-db:
+        image: mysql:5.7
+        environment: 
+        - MYSQL_ROOT_PASSWORD=12345
+        - MYSQL_DATABASE=paazl-db
+        - MYSQL_USER=paazl
+        - MYSQL_PASSWORD=12345
+        - MYSQL_ROOT_HOST=%
+        volumes:
+            - paazl-db-data:/var/lib/mysql
+        ports:
+            - 3306:3306
+                
+    adminer:
+        image: adminer
+        links: 
+        - paazl-db
+        ports:
+        - 8888:8080
+
+volumes:
+    paazl-db-data:
