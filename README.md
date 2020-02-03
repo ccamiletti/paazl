@@ -27,8 +27,9 @@ There are several ways to run a Spring Boot application on your local machine. O
 
 Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
 
-shell
+
 npm install
+
 mvn spring-boot:run
 
 -----------------------------------------------------------------------------------------------------------------------------
