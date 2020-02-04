@@ -6,7 +6,7 @@ tets paazl company
 ## Create containers 
 - [Docker version 19.03.5]
 - [docker-compose version 1.23.1]
-To create paazl database, we are using Docker-compose to create a mysql container (also an 'adminer container' to have access to the database. you can see the credential in docker-compose.yml).
+To create paazl database, we are using Docker-compose to build a mysql container (also an 'adminer container' to have access to the database. you can see the credential in docker-compose.yml).
 
 to create the containers, please run the follow command
 
