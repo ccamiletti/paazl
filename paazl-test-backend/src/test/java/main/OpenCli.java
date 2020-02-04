@@ -23,7 +23,7 @@ public class OpenCli {
 	private static final Logger LOGGER = Logger.getLogger(OpenCli.class.getName());	
     private static final String BASE_URL = "http://localhost:8080/services";
 
-	public List<QuestionEntity> getQuestions() {
+	private List<QuestionEntity> getQuestions() {
 		List<QuestionEntity> questionList = new ArrayList<QuestionEntity>();
 		try {
 		    RestTemplate restTemplate = new RestTemplate();
@@ -36,7 +36,7 @@ public class OpenCli {
 	    return questionList;
 	}
 
-	public Optional<ScoreEntity> getDeveloperLevel(Integer score) throws Exception {
+	private Optional<ScoreEntity> getDeveloperLevel(Integer score) throws Exception {
 		Optional<ScoreEntity> scoreOptional = Optional.empty();
 		try {
 			RestTemplate restTemplate = new RestTemplate();			
