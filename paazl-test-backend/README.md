@@ -16,3 +16,5 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 ```shell
 mvn spring-boot:run
 
+## Running the Test Java Class
+With your favorite java IDE, run the class src/test/main/OpenCli.java
