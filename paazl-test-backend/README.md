@@ -1,5 +1,5 @@
 # paazl
-tets paazl company
+Test paazl company
 
 # Docker containers.
 
