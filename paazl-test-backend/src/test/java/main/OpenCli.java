@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import org.springframework.http.ResponseEntity;
@@ -18,6 +20,7 @@ import nl.paazl.model.ScoreEntity;
 
 public class OpenCli {
 
+	private static final Logger LOGGER = Logger.getLogger(OpenCli.class.getName());	
     private static final String BASE_URL = "http://localhost:8080/services";
 
 	public List<QuestionEntity> getQuestions() {
@@ -28,7 +31,7 @@ public class OpenCli {
 		    ResponseEntity<QuestionEntity[]> result = restTemplate.getForEntity(uri, QuestionEntity[].class);
 		    questionList = Arrays.stream(result.getBody()).collect(Collectors.toList());
 		}catch(Exception e) {
-			e.printStackTrace();
+			LOGGER.log(Level.SEVERE, e.getMessage());
 		}
 	    return questionList;
 	}
@@ -67,6 +70,7 @@ public class OpenCli {
 										.orElseThrow(() -> new Exception());
 			System.out.println("Your got " + score + " correct answers, you are a " + description);
 		}catch(Exception e) {
+			LOGGER.log(Level.SEVERE, e.getMessage());
 	        System.out.println("Sorry, there was an error getting your score");
 		}
 			
